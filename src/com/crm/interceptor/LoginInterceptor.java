@@ -22,17 +22,17 @@ public class LoginInterceptor implements Filter {
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-			   // »ñµÃÔÚÏÂÃæ´úÂëÖĞÒªÓÃµÄrequest,response,session¶ÔÏó
-		       HttpServletRequest servletRequest = (HttpServletRequest) request;
-		       HttpServletResponse servletResponse = (HttpServletResponse) response;
-		       HttpSession session = servletRequest.getSession();		
-		       // »ñµÃÓÃ»§ÇëÇóµÄURI
-		       //String path = servletRequest.getRequestURI();
-		       String path = servletRequest.getServletPath();
-		       //System.out.println(path);
-		       // ´ÓsessionÀïÈ¡ÓÃ»§ĞÅÏ¢
-		       String username = (String) session.getAttribute("username");
-		       // µÇÂ½Ò³ÃæÎŞĞè¹ıÂË
+	       // è·å¾—åœ¨ä¸‹é¢ä»£ç ä¸­è¦ç”¨çš„request,response,sessionå¯¹è±¡
+	       HttpServletRequest servletRequest = (HttpServletRequest) request;
+	       HttpServletResponse servletResponse = (HttpServletResponse) response;
+	       HttpSession session = servletRequest.getSession();		
+	       // è·å¾—ç”¨æˆ·è¯·æ±‚çš„URI
+	       //String path = servletRequest.getRequestURI();
+	       String path = servletRequest.getServletPath();
+	       //System.out.println(path);
+	       // ä»sessioné‡Œå–ç”¨æˆ·ä¿¡æ¯
+	       String username = (String) session.getAttribute("username");
+	       // ç™»é™†é¡µé¢æ— éœ€è¿‡æ»¤
                if(path.indexOf("login.jsp") > -1) {
                    chain.doFilter(servletRequest, servletResponse);
                    return;
@@ -45,12 +45,12 @@ public class LoginInterceptor implements Filter {
                    chain.doFilter(servletRequest, servletResponse);
                    return;
                 }
-               // ÅĞ¶ÏÈç¹ûÃ»ÓĞÈ¡µ½ÓÃ»§ĞÅÏ¢,¾ÍÌø×ªµ½µÇÂ½Ò³Ãæ
+               // åˆ¤æ–­å¦‚æœæ²¡æœ‰å–åˆ°ç”¨æˆ·ä¿¡æ¯,å°±è·³è½¬åˆ°ç™»é™†é¡µé¢
                if (username == null || "".equals(username)) {
-            	    // Ìø×ªµ½µÇÂ½Ò³Ãæ
+            	    // è·³è½¬åˆ°ç™»é™†é¡µé¢
                     servletResponse.sendRedirect("loginout.jsp");
                 } else {
-                    // ÒÑ¾­µÇÂ½,¼ÌĞø´Ë´ÎÇëÇó
+                    // å·²ç»ç™»é™†,ç»§ç»­æ­¤æ¬¡è¯·æ±‚
                     chain.doFilter(request, response);
                }
 	}
