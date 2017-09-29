@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en" class="fixed">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>客户关系管理系统</title>
+		<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+		<link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="vendor/animate.css/animate.css">
+		<link rel="stylesheet" href="vendor/toastr/toastr.min.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css">
+		<link rel="stylesheet" href="stylesheets/css/style2.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="page-header">
+				<div class="leftside-header">
+					<div class="logo">
+						<div class="logo" style="margin:15px 20px">
+							<span style="font-size:18px;color:#fff">客户关系管理系统</span>
+						</div>
+					</div>
+					<div id="menu-toggle" class="visible-xs toggle-left-sidebar" data-toggle-class="left-sidebar-open" data-target="html">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+				<div class="rightside-header">
+					<div class="header-middle"></div>
+					<div class="header-section" id="search-headerbox">
+						<input type="text" name="search" id="search" placeholder="Search...">
+						<i class="fa fa-search search" id="search-icon" aria-hidden="true"></i>
+						<div class="header-separator"></div>
+					</div>
+					<div class="header-section hidden-xs" id="notice-headerbox">
+
+						<div class="notice" id="alerts-notice">
+							<i class="fa fa-bell-o" aria-hidden="true"></i>
+							<span>4</span>
+							<div class="dropdown-box basic">
+								<div class="drop-header">
+									<h3><i class="fa fa-bell-o" aria-hidden="true"></i> Notifications</h3>
+									<span class="number">4</span>
+								</div>
+								<div class="drop-content">
+									<div class="widget-list list-left-element list-sm">
+										<ul>
+											<li>
+												<a href="#">
+													<div class="left-element"><i class="fa fa-warning color-warning"></i></div>
+													<div class="text">
+														<span class="title">8 Bugs</span>
+														<span class="subtitle">reported today</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="left-element"><i class="fa fa-flag color-danger"></i></div>
+													<div class="text">
+														<span class="title">Error</span>
+														<span class="subtitle">sevidor C down</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="left-element"><i class="fa fa-cog color-dark"></i></div>
+													<div class="text">
+														<span class="title">New Configuration</span>
+														<span class="subtitle"></span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="left-element"><i class="fa fa-tasks color-success"></i></div>
+													<div class="text">
+														<span class="title">14 Task</span>
+														<span class="subtitle">completed</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="left-element"><i class="fa fa-envelope color-primary"></i></div>
+													<div class="text">
+														<span class="title">21 Menssage</span>
+														<span class="subtitle"> (see more)</span>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="drop-footer">
+									<a>See all notifications</a>
+								</div>
+							</div>
+						</div>
+						<div class="header-separator"></div>
+					</div>
+					<div class="header-section" id="user-headerbox">
+						<div class="user-header-wrap">
+							<div class="user-photo">
+								<img src="images/user-avatar.jpg" alt="Jane Doe" />
+							</div>
+							<div class="user-info">
+								<span class="user-name">Jane Doe</span>
+							</div>
+							<i class="fa fa-plus icon-open" aria-hidden="true"></i>
+							<i class="fa fa-minus icon-close" aria-hidden="true"></i>
+						</div>
+						<div class="user-options dropdown-box">
+							<div class="drop-content basic">
+								<ul>
+									<li>
+										<a href="pages_user-profile.html"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+									</li>
+									<li>
+										<a href="pages_lock-screen.html"><i class="fa fa-lock" aria-hidden="true"></i> Lock Screen</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Configurations</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="header-separator"></div>
+					<div class="header-section">
+						<a href="pages_sign-in.html"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="page-body">
+				<div class="left-sidebar">
+
+					<div id="left-nav" class="nano">
+						<div class="nano-content">
+							<nav>
+								<ul class="nav" id="main-nav">
+									<li class="active-item">
+										<a href="index.html"><i class="fa fa-home"></i><span>主页</span></a>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-tasks" aria-hidden="true"></i><span>营销管理</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="salchance.html">销售机会管理</a>
+											</li>
+											<li>
+												<a href="client plan.html">客户开发计划</a>
+											</li>
+											<li>
+												<a href="ui-elements_tabs.html">Tabs</a>
+											</li>
+											<li>
+												<a href="ui-elements_buttons.html">Buttons</a>
+											</li>
+											<li>
+												<a href="ui-elements_typography.html">Typography</a>
+											</li>
+											<li>
+												<a href="ui-elements_alerts.html">Alerts</a>
+											</li>
+											<li>
+												<a href="ui-elements_modals.html">Modals</a>
+											</li>
+											<li class="has-child-item close-item">
+												<a>Notifications</a>
+												<ul class="nav child-nav level-2 ">
+													<li>
+														<a href="ui-elements_notifications-pnotify.html">PNotify</a>
+													</li>
+													<li>
+														<a href="ui-elements_notifications-toastr.html">Toastr</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="ui-elements_animations-appear.html">Animations</a>
+											</li>
+										</ul>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-users" aria-hidden="true"></i><span>客户管理</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="client_gaunli.html">客户信息管理</a>
+											</li>
+											<li>
+												<a href="client_liushi.html">客户流失管理</a>
+											</li>
+										</ul>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-paper-plane" aria-hidden="true"></i><span>服务管理</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="srevice_create.html">服务创建</a>
+											</li>
+											<li>
+												<a href="service_allotment.html">服务分配</a>
+											</li>
+											<li>
+												<a href="service_handling.html">服务处理</a>
+											</li>
+											<li>
+												<a href="service_feedback.html">服务反馈</a>
+											</li>
+											<li>
+												<a href="service_guidang.html">服务归档</a>
+											</li>
+										</ul>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-bar-chart" aria-hidden="true"></i><span>统计报表</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="client_gongxian.html">客户贡献分析</a>
+											</li>
+											<li>
+												<a href="client_goucheng.html">客户构成分析</a>
+											</li>
+											<li>
+												<a href="client_fuwufenxi.html">客户服务分析</a>
+											</li>
+											<li>
+												<a href="client_liusifenxi.html">客户流失分析</a>
+											</li>
+										</ul>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-globe" aria-hidden="true"></i><span>基础数据</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="data_zidian.html">数据字典管理</a>
+											</li>
+											<li>
+												<a href="data_chanpingchaxun.html">查询产品信息</a>
+											</li>
+											<li>
+												<a href="data_kucun.html">查询库存</a>
+											</li>
+											<!--<li class="has-child-item close-item">
+                                        <a>Error pages</a>
+                                        <ul class="nav child-nav level-2 ">
+                                            <li><a href="pages_error-404-content.html">Error 404 content</a></li>
+                                            <li><a href="pages_error-404.html">Error 404 page</a></li>
+                                            <li><a href="pages_error-500.html">Error 500</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="pages_faq.html">FAQ</a></li>
+                                    <li><a href="pages_user-profile.html">User profile</a></li>-->
+										</ul>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-cog" aria-hidden="true"></i><span>权限管理</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="widgets_boxes.html">Boxes</a>
+											</li>
+											<li>
+												<a href="widgets_lists.html">Lists</a>
+											</li>
+											<li>
+												<a href="widgets_posts.html">Posts</a>
+											</li>
+											<li>
+												<a href="widgets_timelines.html">Timelines</a>
+											</li>
+										</ul>
+									</li>
+									<li class="has-child-item close-item">
+										<a><i class="fa fa-street-view" aria-hidden="true"></i><span>系统帮助</span></a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a href="helpers_background-border.html">Background & Border</a>
+											</li>
+											<li>
+												<a href="helpers_margin-padding.html">Margin & Padding</a>
+											</li>
+										</ul>
+									</li>
+									<li class=" has-child-item close-item">
+										<a>
+											<i class="fa fa-commenting-o" aria-hidden="true"></i><span>联系我们</span>
+										</a>
+										<ul class="nav child-nav level-1">
+											<li>
+												<a>First Item</a>
+											</li>
+											<li class="has-child-item close-item">
+												<a>Second Item</a>
+												<ul class="nav child-nav level-2 ">
+													<li>
+														<a href="#">Option 1</a>
+													</li>
+													<li>
+														<a href="#">Option 2</a>
+													</li>
+													<li class="has-child-item close-item">
+														<a>Option 3</a>
+														<ul class="nav child-nav level-3 ">
+															<li>
+																<a href="#">Item 1</a>
+															</li>
+															<li>
+																<a href="#">Item 2</a>
+															</li>
+															<li>
+																<a href="#">Item 3</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a>Third Item</a>
+											</li>
+											<li class="has-child-item close-item">
+												<a>Fourth Item</a>
+												<ul class="nav child-nav level-2 ">
+													<li>
+														<a href="#">Option 1</a>
+													</li>
+													<li>
+														<a href="#">Option 2</a>
+													</li>
+													<li class="has-child-item close-item">
+														<a>Option 3</a>
+														<ul class="nav child-nav level-3 ">
+															<li>
+																<a href="#">Item 1</a>
+															</li>
+															<li>
+																<a href="#">Item 2</a>
+															</li>
+															<li>
+																<a href="#">Item 3</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="content-header">
+						<div class="leftside-content-header">
+							<ul class="breadcrumbs">
+								<li><i class="fa fa-home" aria-hidden="true"></i>
+									<a href="#">主页</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row animated fadeInRight">
+						<div class="col-sm-12">
+							<div class="panel">
+								<div class="panel-content">
+									<div class="row">
+										<div class="col-md-12">
+											<form class="form-inline">
+												<h5 class="mb-lg ">
+										客户流失管理
+									</h5>
+												<div class="col-md-12" style="margin-top:20px">
+													<button type="submit" class="btn btn-wide btn-o btn-primary" style="float:right;margin-right:20px;font-size:14px"><i class="fa fa-search"></i>&nbsp;&nbsp;查询</button>
+													<button type="submit" class="btn btn-wide btn-o btn-primary" style="float:right;margin-right:20px;font-size:14px"><i class="fa fa-bars"></i>&nbsp;&nbsp;帮助</button>
+												</div>
+												<div class="col-md-12" style="margin-top:20px">
+													<table class="table  table-bordered text-center">
+														<colgroup>
+															<col class="col-md-1" />
+															<col class="col-md-3" />
+															<col class="col-md-1" />
+															<col class="col-md-3" />
+															<col class="col-md-1" />
+															<col class="col-md-3" />
+														</colgroup>
+														<tr>
+															<th class="active"> 客户</th>
+															<td class="text-left">
+																<input type="text" class="form-control" style="width: 80%;">
+															</td>
+															<th class="active"> 客户经理</th>
+															<td class="text-left">
+																<input type="text" class="form-control" style="width: 80%;">
+															</td>
+															<th class="active"> 状态</th>
+															<td class="text-left"> 
+															<select class="form-control" style="width: 50%;" >
+																	<option value=""> </option>
+																	<option value="全部"> 全部</option>
+																	<option value="暂缓流失"> 暂缓流失</option>
+																	<option value="确认流失">确认流失</option>
+																</select>
+															</td>
+														</tr>
+													</table>
+												</div>
+												<div class="col-md-12" style="margin-top:20px">
+													<table class="table  table-bordered table-striped table-hover text-center">
+														<colgroup>
+															<col class="col-md-2" />
+															<col class="col-md-3" />
+															<col class="col-md-1" />
+															<col class="col-md-2" />
+															<col class="col-md-2" />
+															<col class="col-md-1" />
+															<col class="col-md-1" />
+														</colgroup>
+														<tr>
+															<th> 编号</th>
+															<th> 客户</th>
+															<th>客户经理</th>
+															<th> 上次下单时间</th>
+															<th>确认流失时间</th>
+															<th>状态</th>
+															<th>操作</th>
+														</tr>
+														<tr>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td>
+																<div class="btn-group btn-group-xs">
+																	<button class="btn btn-transparent">
+                                                	<i class="fa fa-check-square-o" style="color:green"></i>
+                                                </button>
+																	<button class="btn btn-transparent">
+                                                	<i class="fa fa-clock-o" style="color:#C66161"></i>
+                                                </button>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<nav aria-label="..." style="float:right">
+														<ul class="pagination">
+															<li class="disabled">
+																<a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+															</li>
+															<li class="active">
+																<a href="#">1 <span class="sr-only">(current)</span></a>
+															</li>
+															<li class="">
+																<a href="#">2 <span class="sr-only">(current)</span></a>
+															</li>
+															<li class="">
+																<a href="#">3 <span class="sr-only">(current)</span></a>
+															</li>
+															<li class="">
+																<a href="#">4 <span class="sr-only">(current)</span></a>
+															</li>
+															<li class="">
+																<a href="#">5 <span class="sr-only">(current)</span></a>
+															</li>
+															<li class="disabled">
+																<a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="right-sidebar">
+					<div class="right-sidebar-toggle" data-toggle-class="right-sidebar-opened" data-target="html">
+						<i class="fa fa-cog fa-spin" aria-hidden="true"></i>
+					</div>
+					<div id="right-nav" class="nano">
+						<div class="nano-content">
+							<div class="template-settings">
+								<h4 class="text-center">Template Settings</h4>
+								<ul class="toggle-settings pv-xlg">
+									<li>
+										<h6 class="text">Header fixed</h6>
+										<label class="switch">
+                                    <input id="header-fixed" type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+									</li>
+									<li>
+										<h6 class="text">Left sidebar fixed</h6>
+										<label class="switch">
+                                    <input id="left-sidebar-fixed" type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+									</li>
+									<li>
+										<h6 class="text">Left sidebar collapsed</h6>
+										<label class="switch">
+                                    <input id="left-sidebar-collapsed" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+									</li>
+									<li>
+										<h6 class="text">Content header fixed</h6>
+										<label class="switch">
+                                    <input id="content-header-fixed" type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+									</li>
+								</ul>
+								<h4 class="text-center">Template Colors</h4>
+								<ul class="toggle-colors">
+									<li>
+										<a href="index.html" class="on-click"> <img alt="Helsinki-green" src="images/helsinki-green.png" /></a>
+									</li>
+									<li>
+										<a href="../helsinki-light/index.html" class="on-click"> <img alt="Helsinki-light" src="images/helsinki-light.png" /></a>
+									</li>
+									<li>
+										<a href="../helsinki-blue/index.html" class="on-click"> <img alt="Helsinki-blue" src="images/helsinki-blue.png" /></a>
+									</li>
+									<li>
+										<a href="../helsinki-red/index.html" class="on-click"> <img alt="Helsinki-red" src="images/helsinki-red.png" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="scroll-to-top"><i class="fa fa-angle-double-up"></i></a>
+			</div>
+		</div>
+		<script src="javascripts/jquery.min.js"></script>
+		<!--<script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+		<script src="vendor/nano-scroller/nano-scroller.js"></script>
+		<script src="javascripts/template-script.min.js"></script>
+		<script src="javascripts/template-init.min.js"></script>
+		<script src="vendor/toastr/toastr.min.js"></script>
+		<script src="vendor/chart-js/chart.min.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="javascripts/examples/dashboard.js"></script>
+	</body>
+
+</html>
